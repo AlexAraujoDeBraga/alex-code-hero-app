@@ -7,3 +7,11 @@
 7 - fazer o header
 8 - fazer o search
 9 - fazer o card
+
+
+/* --------------------tela mobile-------------------- */
+
+/* --------------------tela desktop-------------------- */
+@media (min-width: 768px) {
+
+}

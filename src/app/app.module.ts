@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroDetailComponent } from './pages/hero-detail/hero-detail.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HeroDetailComponent } from './pages/hero-detail/hero-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

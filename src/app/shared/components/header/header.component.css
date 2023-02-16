@@ -1,0 +1,78 @@
+/* --------------------tela mobile-------------------- */
+.divContent {
+  position: relative;
+  padding: 15px 15px 8px 15px;
+  background-color: #fff;
+}
+
+.objectiveLogo {
+  width: 120px;
+  height: 48px;
+}
+
+.divLabelsHeader {
+  position: relative;
+}
+
+.div-p {
+  position: absolute;
+  text-align: right;
+}
+
+.div-p p {
+  font-size: 13px;
+  line-height: 1px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+.nomeCandidato {
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #555;
+  font-weight: bold;
+}
+
+.label {
+  position: absolute;
+  right: 0;
+  margin-right: 0px;
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* --------------------tela desktop-------------------- */
+@media (min-width: 768px) {
+  .objectiveLogo {
+    width: 150px;
+    height: 30px;
+  }
+
+  .divContent {
+    position: relative;
+    padding: 25px 25px 25px 25px;
+    background-color: #fff;
+  }
+
+  .divLabelsHeader {
+    position: relative;
+  }
+
+  .div-p {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .div-p p {
+    font-size: 16px;
+    line-height: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+  }
+
+
+}

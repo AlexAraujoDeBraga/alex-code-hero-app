@@ -3,4 +3,7 @@
 3 - component header ok
 4 - component search ok
 5 - card hero ok
-6 - pagina detalhe ok
+6 - component detalhe ok
+7 - fazer o header
+8 - fazer o search
+9 - fazer o card

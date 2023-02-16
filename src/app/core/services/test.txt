@@ -1,0 +1,6 @@
+1 - router ok
+2 - component home ok -> implementar paginação aqui
+3 - component header ok
+4 - component search ok
+5 - card hero ok
+6 - pagina detalhe ok

@@ -1,1 +1,60 @@
+/* --------------------tela mobile-------------------- */
+.divh1 {
+  text-align: center;
+}
 
+h1 {
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+p {
+  font-weight: bold;
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.row-mobile {
+  justify-content: center;
+}
+
+.search-section {
+  border-radius: 4px;
+  padding: 5px 5px 8px 5px;
+  background-color: #fff;
+}
+
+.search-section:hover{
+  border-radius: 4px;
+  box-shadow: 0 0 0.3em #555;
+}
+
+.person {
+  font-size: 13px;
+  text-indent: 10px;
+}
+
+/* --------------------tela desktop-------------------- */
+@media (min-width: 768px) {
+  .divh1 {
+    text-align: left;
+  }
+
+  h1 {
+    font-weight: bold;
+    margin-top: 36px;
+    font-size: 32px;
+  }
+
+  p {
+    font-weight: bold;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+
+  .row-mobile {
+    justify-content: left;
+  }
+
+}

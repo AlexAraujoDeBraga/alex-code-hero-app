@@ -1,4 +1,8 @@
 /* --------------------tela mobile-------------------- */
+.card-desktop {
+  display: none;
+}
+
 .divPersonagem {
   position: relative;
 }

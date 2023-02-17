@@ -1,3 +1,4 @@
+import { HeroAPIService } from './../../../core/services/heroAPI.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,25 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardHeroComponent implements OnInit {
 
-  heroes: Hero [] = [];
+  heroes: any = [];
 
-  constructor() { }
+  constructor(private heroApiService: HeroAPIService) { }
 
   ngOnInit(): void {
-    this.heroes = new Array<Hero>();
-    this.heroes = [
-      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
-      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
-      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
-      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
-      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
-      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'}
-    ]
+
+    this.heroApiService.getAllHeroes().subscribe(
+      next => this.heroes = next.data.results,
+      error =>  console.log(error),
+      () => console.log("End call API: getAllHeroes() method")
+    )
+
   }
-
-}
-
-class Hero {
-  img?: string;
-  name?: string;
+  // this.heroes = next.data.results
 }

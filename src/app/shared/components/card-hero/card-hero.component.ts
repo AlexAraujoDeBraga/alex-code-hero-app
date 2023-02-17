@@ -21,5 +21,4 @@ export class CardHeroComponent implements OnInit {
     )
 
   }
-  // this.heroes = next.data.results
 }

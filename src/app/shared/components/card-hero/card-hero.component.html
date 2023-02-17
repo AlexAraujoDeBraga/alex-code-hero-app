@@ -1,10 +1,10 @@
 <!-- card-mobile -->
-<section class="container card-mobile">
+<section class="container cardMobile">
   <div class="row">
     <div class="col-6 divPersonagem">
       <label class="labelPersonagem">Personagem</label>
     </div>
-    <div class="col-12 div-card">
+    <div class="col-12 divCard">
       <div class="card" *ngFor="let hero of heroes">
         <img [src]="hero.thumbnail.path +'/standard_medium.'+hero.thumbnail.extension" alt="">
         <p>{{hero.name}}</p>
@@ -13,15 +13,33 @@
   </div>
 </section>
 <!-- card-desktop -->
-<section class="container card-desktop">
+<section class="container cardDesktop">
   <div class="row">
-    <div class="col-6 divPersonagem">
-      <label class="labelPersonagem">Personagem</label>
+    <div class="col-lg-4">
+      <label class="labelOne">Personagem</label>
     </div>
-    <div class="col-12 div-card">
-      <div class="card" *ngFor="let hero of heroes">
-        <img [src]="hero.img" alt="">
-        <p>{{hero.name}}</p>
+    <div class="col-lg-4">
+      <label class="labelTwo">Séries</label>
+    </div>
+    <div class="col-lg-4">
+      <label class="labelThree">Eventos</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card" *ngFor="let hero of heroes">
+      <div class="col-lg-4 divCardOne">
+        <img [src]="hero.thumbnail.path +'/standard_medium.'+hero.thumbnail.extension" alt="">
+        <p class="nameHero">{{hero.name}}</p>
+      </div>
+      <div class="col-lg-4 divCardTwo">
+        <ul *ngFor="let series of hero.series.items">
+          <li class="seriesHero">{{series.name}}</li>
+        </ul>
+      </div>
+      <div class="col-lg-4 divCardThree">
+        <ul *ngFor="let events of hero.events.items">
+          <li class="eventsHero">{{events.name}}</li>
+        </ul>
       </div>
     </div>
   </div>

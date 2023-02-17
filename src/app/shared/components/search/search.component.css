@@ -19,7 +19,7 @@
 #search-div input:focus{
   outline: none !important;
   border: 1px solid #fff;
-  caret-color: #E5E5E5;
+  caret-color: #000;
 }
 
 #search-div img{

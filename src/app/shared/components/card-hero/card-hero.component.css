@@ -1,6 +1,10 @@
 /* --------------------tela mobile-------------------- */
-.card-desktop {
+.cardDesktop {
   display: none;
+}
+
+.cardMobile {
+  display: inline;
 }
 
 .divPersonagem {
@@ -14,7 +18,7 @@
   right: 0;
 }
 
-.div-card {
+.divCard {
   margin-top: 70px;
 }
 
@@ -35,10 +39,81 @@
 
 .card img {
   width: 60px;
+  height: 60px;
 }
 /* --------------------tela desktop-------------------- */
 @media (min-width: 768px) {
-  .card-mobile {
+  .cardMobile {
     display: none;
+  }
+
+  .cardDesktop {
+    display: inline;
+  }
+
+  .labelOne {
+    margin-left: 0.5rem;
+    margin-top: 40px;
+    font-size: 11pt;
+  }
+
+  .labelTwo {
+    margin-left: 1.5rem;
+    margin-top: 40px;
+    font-size: 11pt;
+  }
+
+  .labelThree {
+    margin-left: 1rem;
+    margin-top: 40px;
+    font-size: 11pt;
+  }
+
+  .card {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 25px 10px 10px 15px;
+    height: 100%;
+  }
+
+  .divCardOne {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .divCardThree ul {
+    list-style: none;
+  }
+
+  .divCardTwo ul {
+    list-style: none;
+  }
+
+  .divCardTwo ul>li {
+    margin-top: -15px;
+  }
+
+  .divCardThree ul>li {
+    margin-top: -15px;
+  }
+
+  .divCardOne .nameHero {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .eventsHero {
+    font-weight: 300 !important;
+    font-size: 15px;
+  }
+
+  .seriesHero {
+    font-weight: 300 !important;
+    font-size: 15px;
+  }
+
+  .divCardOne img {
+    width: 60px !important;
+    height: 65px !important;
   }
 }

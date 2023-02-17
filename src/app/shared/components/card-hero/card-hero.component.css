@@ -1,0 +1,40 @@
+/* --------------------tela mobile-------------------- */
+.divPersonagem {
+  position: relative;
+}
+
+.labelPersonagem {
+  position: absolute;
+  margin-top: 40px;
+  font-size: 11pt;
+  right: 0;
+}
+
+.div-card {
+  margin-top: 70px;
+}
+
+.card {
+  margin-bottom: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+}
+
+.card p {
+    line-height: 50px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card img {
+  width: 60px;
+}
+/* --------------------tela desktop-------------------- */
+@media (min-width: 768px) {
+  .card-mobile {
+    display: none;
+  }
+}

@@ -1,1 +1,15 @@
-<p>card-hero works!</p>
+<!-- card-mobile -->
+<section class="container card-mobile">
+  <div class="row">
+    <div class="col-6 divPersonagem">
+      <label class="labelPersonagem">Personagem</label>
+    </div>
+    <div class="col-12 div-card">
+      <div class="card" *ngFor="let hero of heroes">
+        <img [src]="hero.img" alt="">
+        <p>{{hero.name}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- card-desktop -->

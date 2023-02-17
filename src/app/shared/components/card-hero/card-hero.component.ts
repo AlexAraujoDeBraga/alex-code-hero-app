@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardHeroComponent implements OnInit {
 
+  heroes: Hero [] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.heroes = new Array<Hero>();
+    this.heroes = [
+      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
+      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
+      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
+      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
+      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'},
+      {img: '../../../../assets/img/photo.png', name: 'Jason Macandela'}
+    ]
   }
 
+}
+
+class Hero {
+  img?: string;
+  name?: string;
 }

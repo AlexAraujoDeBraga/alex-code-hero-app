@@ -5,7 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardHeroComponent } from './components/card-hero/card-hero.component';
 import { HeroAPIService } from '../services/heroAPI.service';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { HeroAPIService } from '../services/heroAPI.service';
     CardHeroComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
   ],
   providers: [HeroAPIService],
   bootstrap: []

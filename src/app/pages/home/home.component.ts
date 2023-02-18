@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  heroes: any[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+
+  filtroHeroes(value: any) {
+    console.log(value);
   }
 
 }

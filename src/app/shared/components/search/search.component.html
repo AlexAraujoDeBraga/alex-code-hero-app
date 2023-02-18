@@ -1,4 +1,4 @@
 <div id="search-div">
-  <input class="search" type="text" name="search" placeholder="Search"/>
+  <input [formControl]="myControl" [(ngModel)]="searchItem" class="search" type="text" name="search" placeholder="Search"/>
   <img class="img" src="./../../../assets/img/search.png" width="20px" height="20px" alt="">
 </div>

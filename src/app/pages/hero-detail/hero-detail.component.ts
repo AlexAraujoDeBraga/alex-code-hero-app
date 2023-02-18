@@ -23,6 +23,7 @@ export class HeroDetailComponent implements OnInit {
 
   // ngOnDestroy(): void {
   //   this.heroDetail = null;
+  //   this.heroApiService?.getSeriesOfSelectedHero.unsubscribe();
   // }
 
   backToHome() {

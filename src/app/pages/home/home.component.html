@@ -5,7 +5,7 @@
       <p>Nome do personagem</p>
     </div>
     <div class="col-lg-4 col-10 search-section">
-      <app-search></app-search>
+      <app-search (sendFiltroEvent)="filtroHeroes($event)"></app-search>
     </div>
     <div class="col-12">
       <app-card-hero></app-card-hero>

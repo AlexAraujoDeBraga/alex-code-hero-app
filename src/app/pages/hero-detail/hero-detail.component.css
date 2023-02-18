@@ -21,7 +21,7 @@
 }
 
 .card-img-top {
-  width: 140px;
+  width: 60%;
   margin: auto;
 }
 
@@ -47,7 +47,7 @@
 }
 
 /* --------------------tela desktop-------------------- */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .detailMobile {
     display: none;
   }
@@ -56,11 +56,17 @@
     display: inline;
   }
 
-  .voltarSimbolo {
-    display: none;
+  .card {
+    width: 20%;
+    padding: 2rem;
+    margin: 5px;
+    text-align: center;
   }
 
-  .voltarText {
-    display: none;
+  .detailDesktop div>div>p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
   }
+
 }

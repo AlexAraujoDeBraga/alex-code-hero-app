@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HeroAPIService } from './../../services/heroAPI.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
@@ -10,7 +11,7 @@ export class HeroDetailComponent implements OnInit {
 
   heroDetail: any = [];
 
-  constructor(private heroApiService: HeroAPIService) { }
+  constructor(private heroApiService: HeroAPIService, private router: Router) { }
 
   ngOnInit(): void {
     this.heroApiService.getSeriesOfSelectedHero().subscribe(
@@ -24,5 +25,8 @@ export class HeroDetailComponent implements OnInit {
   //   this.heroDetail = null;
   // }
 
+  backToHome() {
+    this.router.navigateByUrl('');
+  }
 
 }

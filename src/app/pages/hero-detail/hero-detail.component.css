@@ -1,6 +1,66 @@
 /* --------------------tela mobile-------------------- */
+.detailMobile {
+  display: inline;
+}
+
+.detailMobile div>div>p {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.detailDesktop {
+  display: none;
+}
+
+.card {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  margin-bottom: 5px;
+}
+
+.card-img-top {
+  width: 140px;
+  margin: auto;
+}
+
+.voltarSimbolo {
+  display: inline;
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #555;
+  font-weight: bold;
+  font-size: 25pt;
+  cursor: pointer;
+  position: relative;
+}
+
+.voltarText {
+  position: absolute;
+  display: inline;
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #555;
+  font-size: 12pt;
+  font-weight: 300;
+  bottom: 8px;
+  left: 30px;
+}
 
 /* --------------------tela desktop-------------------- */
 @media (min-width: 768px) {
+  .detailMobile {
+    display: none;
+  }
 
+  .detailDesktop {
+    display: inline;
+  }
+
+  .voltarSimbolo {
+    display: none;
+  }
+
+  .voltarText {
+    display: none;
+  }
 }

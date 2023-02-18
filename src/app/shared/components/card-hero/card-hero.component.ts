@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
 })
 export class CardHeroComponent implements OnInit {
 
+  @Input() heroesFilter: any [] = [];
+
+  heroesList = [];
+
   heroSelected: any;
 
   heroes: any = [];
@@ -18,7 +22,7 @@ export class CardHeroComponent implements OnInit {
   ngOnInit(): void {
 
     this.heroApiService.getAllHeroes().subscribe(
-      next => this.heroes = next.data.results,
+      next => this.heroesFilter.length > 0 ? this.heroes = this.heroesFilter : this.heroes = next.data.results,
       error =>  console.log(error),
       () => console.log("End call getAllHeroes method")
     )

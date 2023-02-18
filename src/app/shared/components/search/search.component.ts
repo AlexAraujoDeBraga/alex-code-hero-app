@@ -13,7 +13,7 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class SearchComponent implements OnInit, OnDestroy {
 
-  @Output() sendFiltroEvent = new EventEmitter<string>();
+  @Output() sendFiltroEvent = new EventEmitter<any>();
 
   myControl = new FormControl('');
   options: string[] = [];
@@ -67,10 +67,27 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   private _filter(value: string) {
     const filterValue = value.toLowerCase();
-    let optionsForSend: string[] = [];
+    let namesForSend: string[] = [];
 
-    optionsForSend = this.options.filter(option => option.toLowerCase().includes(filterValue));
-    this.sendFiltro(optionsForSend);
+    let list:any = [
+      {heroesNameList: []},
+      {heroesList: []}
+    ];
+
+
+    namesForSend = this.options.filter(option => option.toLowerCase().includes(filterValue));
+
+    namesForSend.forEach(e => {
+      list[0].heroesNameList.push(e);
+      for (let hero of this.heroes) {
+        if (hero.name == e) {
+          list[1].heroesList.push(hero);
+        }
+      }
+    });
+
+
+    this.sendFiltro(list);
 
   }
 

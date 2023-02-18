@@ -7,8 +7,10 @@
     <div class="col-lg-4 col-10 search-section">
       <app-search (sendFiltroEvent)="filtroHeroes($event)"></app-search>
     </div>
-    <div class="col-12">
-      <app-card-hero></app-card-hero>
+    <div class="col-12" *ngIf="showCard">
+      <app-card-hero
+        [heroesFilter]="listHeroes[1].heroesList">
+      </app-card-hero>
     </div>
   </div>
 </section>

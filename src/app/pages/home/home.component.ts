@@ -7,17 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  heroes: any[] = [];
+  listHeroes:any = [
+    {heroesNameList: []},
+    {heroesList: []}
+  ];
+
+  showCard: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.showCard = true;
   }
 
-
-
   filtroHeroes(value: any) {
-    console.log(value);
+
+    this.listHeroes[0].heroesNameList = value[0].heroesNameList;
+    this.listHeroes[1].heroesList = value[1].heroesList;
+
+    if (this.listHeroes[1].heroesList != null) {
+      this.showCard = false;
+    }
+
+    setTimeout(() => {
+      this.showCard = true;
+    });
   }
 
 }

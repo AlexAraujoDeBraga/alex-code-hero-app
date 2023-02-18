@@ -1,1 +1,22 @@
-<p>hero-detail works!</p>
+<section class="container detailMobile">
+  <p>Séries</p>
+  <div class="card" style="width: 18rem;" *ngFor="let detail of heroDetail">
+    <img class="card-img-top" [src]="detail.thumbnail.path +'/standard_medium.'+detail.thumbnail.extension" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{detail.title}}</h5>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="container detailDesktop">
+
+  <!-- <div class="card" style="width: 18rem;" *ngFor="let detail of heroDetail">
+    <img class="card-img-top" [src]="detail.thumbnail.path +'/standard_medium.'+detail.thumbnail.extension" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{detail.title}}</h5>
+    </div>
+  </div> -->
+
+</section>

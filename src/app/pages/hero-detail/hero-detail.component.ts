@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { HeroAPIService } from './../../services/heroAPI.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero-detail',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroDetailComponent implements OnInit {
 
-  constructor() { }
+  heroDetail: any = [];
+
+  constructor(private heroApiService: HeroAPIService) { }
 
   ngOnInit(): void {
+    this.heroApiService.getSeriesOfSelectedHero().subscribe(
+      next => this.heroDetail = next.data.results,
+      error =>  console.log(error),
+      () => console.log("End call getSeriesOfSelectedHero method")
+    )
   }
+
+  // ngOnDestroy(): void {
+  //   this.heroDetail = null;
+  // }
+
 
 }

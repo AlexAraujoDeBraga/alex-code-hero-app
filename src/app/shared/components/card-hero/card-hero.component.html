@@ -5,7 +5,7 @@
       <label class="labelPersonagem">Personagem</label>
     </div>
     <div class="col-12 divCard">
-      <div class="card" *ngFor="let hero of heroes">
+      <div class="card" *ngFor="let hero of heroes" (click)="detailPage(hero)">
         <img [src]="hero.thumbnail.path +'/standard_medium.'+hero.thumbnail.extension" alt="">
         <p>{{hero.name}}</p>
       </div>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="card" *ngFor="let hero of heroes">
+    <div class="card" *ngFor="let hero of heroes" (click)="detailPage(hero)">
       <div class="col-lg-4 divCardOne">
         <img [src]="hero.thumbnail.path +'/standard_medium.'+hero.thumbnail.extension" alt="">
         <p class="nameHero">{{hero.name}}</p>

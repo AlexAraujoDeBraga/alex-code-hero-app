@@ -1,5 +1,6 @@
-import { HeroAPIService } from './../../../core/services/heroAPI.service';
-import { Component, OnInit } from '@angular/core';
+import { HeroAPIService } from './../../../services/heroAPI.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-hero',
@@ -8,17 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardHeroComponent implements OnInit {
 
+  heroSelected: any;
+
   heroes: any = [];
 
-  constructor(private heroApiService: HeroAPIService) { }
+  constructor(private heroApiService: HeroAPIService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.heroApiService.getAllHeroes().subscribe(
       next => this.heroes = next.data.results,
       error =>  console.log(error),
-      () => console.log("End call API: getAllHeroes() method")
+      () => console.log("End call getAllHeroes method")
     )
 
+  }
+
+  detailPage(heroDetail: any) {
+    this.heroApiService.selectHeroForDetail(heroDetail);
+    this.router.navigateByUrl('/hero-detail');
   }
 }

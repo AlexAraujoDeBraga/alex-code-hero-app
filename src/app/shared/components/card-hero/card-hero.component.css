@@ -42,6 +42,29 @@
   width: 60px;
   height: 60px;
 }
+
+.paginationDiv {
+  background-color: #fff;
+  padding: 20px 20px;
+}
+
+.botaoPagination {
+  padding: 5px 10px;
+  border: 1px solid #E5E5E5;
+  background-color: #E5E5E5;
+  border-radius: 5px;
+  margin: 10px;
+  color: #555555;
+}
+
+.paginationOpt {
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #8E8E8E;
+  font-weight: 100;
+  font-size: 15pt;
+  cursor: pointer;
+  line-height: 3.5rem;
+}
 /* --------------------tela desktop-------------------- */
 @media (min-width: 768px) {
   .cardMobile {

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
 /* You can add global styles to this file, and also import other style files */
-html, body { margin: 0; padding: 0; background-color: #E5E5E5; font-family: 'PT Sans Caption', sans-serif; color: #555}
+html, body { margin: 0; padding: 0; background-color: #E5E5E5; font-family: 'PT Sans Caption', sans-serif; color: #555; overflow-x: hidden;}
 
 

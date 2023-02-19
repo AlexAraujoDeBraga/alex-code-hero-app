@@ -5,7 +5,7 @@
       <label class="labelPersonagem">Personagem</label>
     </div>
     <div class="col-12 divCard">
-      <div class="card" *ngFor="let hero of heroes" (click)="detailPage(hero)">
+      <div class="card" *ngFor="let hero of heroesPorPagina" (click)="detailPage(hero)">
         <img [src]="hero.thumbnail.path +'/standard_medium.'+hero.thumbnail.extension" alt="">
         <p>{{hero.name}}</p>
       </div>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="card" *ngFor="let hero of items;" (click)="detailPage(hero)">
+    <div class="card" *ngFor="let hero of heroesPorPagina;" (click)="detailPage(hero)">
       <div class="col-lg-4 divCardOne">
         <img [src]="hero.thumbnail.path +'/standard_medium.'+hero.thumbnail.extension" alt="">
         <p class="nameHero">{{hero.name}}</p>
@@ -44,8 +44,6 @@
     </div>
   </div>
 </section>
-
-<!-- <app-pagination></app-pagination> -->
 
 <div class="row paginationDiv">
   <div class="col-12 d-flex justify-content-center">

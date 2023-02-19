@@ -15,7 +15,7 @@ export class CardHeroComponent implements OnInit {
   heroesList = [];
   heroSelected: any;
   heroes:any = [];
-  items: any = [];
+  heroesPorPagina: any = [];
   itemsPorPagina: number = 10;
   public selectedPage = 1;
 
@@ -26,7 +26,7 @@ export class CardHeroComponent implements OnInit {
 
     this.heroApiService.getAllHeroes().subscribe((data) => {
       this.heroesFilter.length > 0 ? this.heroes = this.heroesFilter : this.heroes = data.data.results
-      this.items = this.heroes.slice(pageIndex, this.itemsPorPagina);
+      this.heroesPorPagina = this.heroes.slice(pageIndex, this.itemsPorPagina);
   });
 
   }
@@ -55,8 +55,7 @@ export class CardHeroComponent implements OnInit {
   slicedItems() {
     let pageIndex = (this.selectedPage - 1) * this.itemsPorPagina;
     let endIndex = (this.selectedPage - 1) * this.itemsPorPagina + this.itemsPorPagina;
-    // this.items = this.heroes.slice(pageIndex, this.itemsPorPagina);
-    this.items = [];
-    this.items = this.heroes.slice(pageIndex, endIndex);
+    this.heroesPorPagina = [];
+    this.heroesPorPagina = this.heroes.slice(pageIndex, endIndex);
   }
 }

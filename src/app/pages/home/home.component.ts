@@ -25,13 +25,12 @@ export class HomeComponent implements OnInit {
     this.listHeroes[0].heroesNameList = value[0].heroesNameList;
     this.listHeroes[1].heroesList = value[1].heroesList;
 
-    if (this.listHeroes[1].heroesList != null) {
+    if (this.listHeroes[1].heroesList.length > 0) {
       this.showCard = false;
+      setTimeout(() => {
+        this.showCard = true;
+      });
     }
-
-    setTimeout(() => {
-      this.showCard = true;
-    });
   }
 
 }

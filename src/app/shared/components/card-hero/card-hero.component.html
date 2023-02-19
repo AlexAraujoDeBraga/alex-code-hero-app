@@ -48,13 +48,15 @@
 <div class="row paginationDiv">
   <div class="col-12 d-flex justify-content-center">
     <div class="btn-group float-right">
-      <label class="paginationOpt"><</label>
+      <label class="paginationOpt" (click)="onPrevAll()"><<</label>
+      <label class="paginationOpt" (click)="onPrev(-1)"><</label>
       <button class="botaoPagination"
         *ngFor="let page of pageNumbers"
         (click)="changePage(page)"
         [class.active]="page == selectedPage">{{page}}
       </button>
-      <label class="paginationOpt">></label>
+      <label class="paginationOpt" (click)="onNext(1)">></label>
+      <label class="paginationOpt" (click)="onNextAll()">>></label>
     </div>
   </div>
 </div>

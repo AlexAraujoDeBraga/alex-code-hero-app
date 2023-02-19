@@ -2,6 +2,7 @@ import { HeroAPIService } from './../../../services/heroAPI.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { SlicePipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-card-hero',
@@ -17,14 +18,17 @@ export class CardHeroComponent implements OnInit {
   heroes:any = [];
   heroesPorPagina: any = [];
   itemsPorPagina: number = 10;
+  iterator: number = 0;
   public selectedPage = 1;
+
+  getHeroSubscription?: Subscription;
 
   constructor(private heroApiService: HeroAPIService, private router: Router) { }
 
   ngOnInit(): void {
     let pageIndex = (this.selectedPage - 1) * this.itemsPorPagina;
 
-    this.heroApiService.getAllHeroes().subscribe((data) => {
+    this.getHeroSubscription = this.heroApiService.getAllHeroes().subscribe((data) => {
       this.heroesFilter.length > 0 ? this.heroes = this.heroesFilter : this.heroes = data.data.results
       this.heroesPorPagina = this.heroes.slice(pageIndex, this.itemsPorPagina);
   });
@@ -49,6 +53,36 @@ export class CardHeroComponent implements OnInit {
 
   changePage(page: any){
     this.selectedPage = page;
+    this.slicedItems();
+  }
+
+  onNext(value: number) {
+    this.iterator = this.selectedPage + value;
+    if (this.iterator <= this.pageNumbers.length) {
+      this.selectedPage = this.selectedPage + value;
+      this.slicedItems();
+    } else {
+      this.iterator = this.iterator -1;
+    }
+  }
+
+  onNextAll() {
+    this.selectedPage = this.pageNumbers.length;
+    this.slicedItems();
+  }
+
+  onPrev(value: number) {
+    this.iterator = this.selectedPage + value;
+    if (this.iterator >= 0 && this.selectedPage > 1) {
+        this.selectedPage = this.selectedPage + value;
+        this.slicedItems();
+    } else {
+      this.iterator = this.iterator + 1;
+    }
+  }
+
+  onPrevAll() {
+    this.selectedPage = 1;
     this.slicedItems();
   }
 

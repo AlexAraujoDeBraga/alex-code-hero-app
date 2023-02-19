@@ -74,6 +74,8 @@
   font-size: 15pt;
   cursor: pointer;
   line-height: 3.5rem;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 /* --------------------tela desktop-------------------- */
 @media (min-width: 768px) {

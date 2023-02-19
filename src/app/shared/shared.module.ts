@@ -1,4 +1,3 @@
-import { PaginationComponent } from './components/pagination/pagination.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,14 +11,12 @@ import { SlicePipe } from '@angular/common';
   declarations: [
     HeaderComponent,
     SearchComponent,
-    CardHeroComponent,
-    PaginationComponent
+    CardHeroComponent
   ],
   exports: [
     HeaderComponent,
     SearchComponent,
-    CardHeroComponent,
-    PaginationComponent
+    CardHeroComponent
   ],
   imports: [
     BrowserModule,
